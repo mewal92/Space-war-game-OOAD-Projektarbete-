@@ -1,8 +1,11 @@
 package ui;
 
 import main.GamePanel;
+import unit.Player;
+import unit.PlayerScores;
 
 import java.awt.*;
+
 
 public class EndState implements GameState{
     @Override
@@ -10,6 +13,8 @@ public class EndState implements GameState{
         g2.setColor(Color.white);
         g2.setFont(g2.getFont().deriveFont(Font.BOLD, 32F));
         g2.drawString("GAME OVERUUUU", getCenterForX(g2,"GAME OVERUUUU", gp), gp.height / 2);
+
+        //new PlayerScores();
 
         if(gp.sound.isMuted()) {
             g2.setFont(g2.getFont().deriveFont(Font.BOLD, 14F));
@@ -26,7 +31,7 @@ public class EndState implements GameState{
     }
     @Override
     public GameState setNext() {
-        return new HomeState();
+        return new ScoreState();
     }
 
     @Override

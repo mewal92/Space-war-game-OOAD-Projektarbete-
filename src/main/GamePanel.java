@@ -1,13 +1,11 @@
 package main;
 
 import Sound.Sound;
+import ui.EndState;
 import ui.GameState;
 import ui.HomeState;
 import ui.State;
-import unit.Laser;
-import unit.Obstacle;
-import unit.Player;
-import unit.UnitLoader;
+import unit.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -31,6 +29,7 @@ public class GamePanel extends JPanel implements Runnable {
     public UnitLoader unitLoader = new UnitLoader(this);
     public CollisionHandler ch = new CollisionHandler(this);
     public Sound sound = new Sound(this);
+    public PlayerScores playerScores = new PlayerScores();
 
     public GamePanel() {
 
@@ -108,6 +107,5 @@ public class GamePanel extends JPanel implements Runnable {
     public void setLastState(){
         state.setLastState();
     }
-
 
 }

@@ -7,7 +7,6 @@ import java.util.Random;
 public class UnitLoader {
 
     private final GamePanel gp;
-
     private int obstacleCount = 0;
     private int loopCount = 0;
     private int obstacleInterval = 50;
@@ -32,7 +31,7 @@ public class UnitLoader {
     }
 
     private int randomSpeed() {
-        int speed;
+      int speed;
         Random rng = new Random();
         int randomNr = rng.nextInt(1, 101);
         if (randomNr < 20){
